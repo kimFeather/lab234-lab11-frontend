@@ -15,9 +15,9 @@ install:
 - ls -l
 
 script:
-- docker build -t kimfeather/se234-lab11-client .
-- docker push kimfeather/se234-lab11-client
-- docker pull kimfeather/se234-lab11-client
+- docker build -t kuribohw/se234-lab11-client .
+- docker push kuribohw/se234-lab11-client
+- docker pull kuribohw/se234-lab11-client
 service: docker
 env:
   global:
