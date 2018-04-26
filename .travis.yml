@@ -12,11 +12,12 @@ install:
 - npm install
 - npm run ng-deploy
 - ls -l
+before_script:
+- export DOCKER_HOST="$HOST_NAME"
 script:
 - docker build -t kimfeather/se234-lab11-client .
 - docker push kimfeather/se234-lab11-client
 - docker pull kimfeather/se234-lab11-client
-- export DOCKER_HOST="$HOST_NAME"
 service: docker
 env:
   global:
